@@ -1,0 +1,174 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Inicio | Gimnasio</title>
+  <link rel="stylesheet" href="css/styles.css">
+  <link rel="stylesheet" href="css/footer.css">
+  <link rel="stylesheet" href="css/header.css">
+</head>
+<body>
+  <!-- Encabezado -->
+  <header>
+    <nav>
+      <ul class="mega-menu">
+        <li>
+          <a href="#">Opciones</a>
+          <ul>
+            <li><a href="clases.html">Clases</a></li> <!-- Link hacia la Página de Clases -->
+            <li><a href="entrenadores.html">Entrenadores</a></li>
+            <li><a href="precios.html">Precios</a></li>
+            <li><a href="contacto.html">Contacto</a></li>
+            <li><a href="blog.html">Blog</a></li>
+            
+          </ul>
+        </li>
+      </ul>
+      
+      <button id="toggle-modo" aria-label="Alternar modo oscuro">🌙</button>
+    </nav>
+
+  </header>
+
+  <!-- Sección Hero -->
+<!--
+  <section class="hero">
+    <video autoplay muted loop>
+      <source src="images/videoplayback.mp4" type="video/mp4">
+      Tu navegador no soporta videos.
+    </video>
+    <video autoplay muted loop>
+      <source src="images/🔥CROSSFIT WORKOUT …...mp4" type="video/mp4">
+      Tu navegador no soporta videos.
+    </video>
+
+    <video autoplay muted loop>
+      <source src="images/videoplayback1.mp4" type="video/mp4">
+      Tu navegador no soporta videos.
+    </video>
+    <video autoplay muted loop>
+      <source src="images/CINEMATIC GYM FITNESS VIDEO - SONY A7III(NO GIMBAL NO LIGHT).mp4" type="video/mp4">
+      Tu navegador no soporta videos.
+    </video>
+    <div class="overlay">
+      <h1>¡Transforma tu vida hoy!</h1>
+    </div>
+    <video autoplay muted loop>
+      <source src="images/Fitness teaser💯💪 #broll #cinematic #filmmaker #filmmaking #fitness #gym #gymbro #gymmotivation.mp4" type="video/mp4">
+      Tu navegador no soporta videos.
+    </video>
+  </section>
+-->
+<section class="hero">
+  <video autoplay muted loop>
+    <source src="images/Hero.mp4" type="video/mp4">
+    Tu navegador no soporta videos.
+  </video>
+  <div class="overlay">
+    <h1>¡Transforma tu vida hoy!</h1>
+  </div>
+</section>
+  <!-- Clases destacadas -->
+  <section class="classes">
+    <h2>Clases Destacadas</h2>
+    <div class="card-container">
+      <div class="card">
+        <h3>CrossFit</h3>
+        <p>Entrenamiento funcional intensivo.</p>
+      </div>
+      <div class="card">
+        <h3>Yoga</h3>
+        <p>Equilibrio entre cuerpo y mente.</p>
+      </div>
+      <div class="card">
+        <h3>Spinning</h3>
+        <p>Clases llenas de energía.</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- Contador animado -->
+  <section class="counter">
+    <h2>¡Más de 500 socios satisfechos!</h2>
+    <p class="count" id="counter"></p>
+  </section>
+
+  <!-- Testimonios -->
+  <section class="testimonials">
+    <h2>Testimonios</h2>
+    <div class="carousel">
+      <div class="testimonial">
+        <p>"¡Un gimnasio increíble! Los entrenadores son muy profesionales."</p>
+      </div>
+      <div class="testimonial">
+        <p>"Me encanta la variedad de clases, siempre encuentro algo nuevo."</p>
+      </div>
+      <div class="testimonial">
+        <p>"¡Un gimnasio increíble! Los entrenadores son muy profesionales."</p>
+      </div>
+      <div class="testimonial">
+        <p>"¡Un gimnasio increíble! Los entrenadores son muy profesionales."</p>
+      </div>
+      <div class="testimonial">
+        <p>"¡Un gimnasio increíble! Los entrenadores son muy profesionales."</p>
+      </div>
+      <div class="testimonial">
+        <p>"¡Un gimnasio increíble! Los entrenadores son muy profesionales."</p>
+      </div>
+      <div class="testimonial">
+        <p>"¡Un gimnasio increíble! Los entrenadores son muy profesionales."</p>
+      </div>
+      <div class="testimonial">
+        <p>"¡Un gimnasio increíble! Los entrenadores son muy profesionales."</p>
+      </div>
+    </div>
+  </section>
+
+
+
+
+  <!-- Pie de página -->
+  <footer>
+    <div class="newsletter">
+        <h3>SUSCRÍBETE A NUESTRO BOLETÍN</h3>
+        <form>
+            <input type="email" placeholder="Correo electrónico">
+            <button type="submit">SUSCRIBIRSE</button>
+        </form>
+    </div>
+
+    <div class="social-media">
+        <h3>Conecta con nosotros</h3>
+        <ul>
+            <li><a href="#">Facebook</a></li>
+            <li><a href="#">Instagram</a></li>
+            <li><a href="#">Twitter</a></li>
+        </ul>
+    </div>
+
+    <div class="location">
+        <h3>NUESTRA UBICACIÓN</h3>
+        <iframe src="https://www.google.com/maps/embed?..." width="200" height="150" allowfullscreen="" loading="lazy"></iframe>
+    </div>
+
+    <div class="copyright">
+        <p>© 2025 Olimpo Gym. Todos los derechos reservados.</p>
+    </div>
+</footer>
+
+  <script>
+    let count = 0;
+    const target = 500;
+    const interval = setInterval(() => {
+      count += 10; // Incrementa de 10 en 10
+      document.getElementById("counter").innerText = count + "+";
+      if (count >= target) {
+        clearInterval(interval); // Detiene el contador
+      }
+    }, 50); // Tiempo entre incrementos (50ms)
+  </script>
+  <script src="js/indes.js"></script>
+  <script src="js/mod.js"></script>
+</body>
+</html>
