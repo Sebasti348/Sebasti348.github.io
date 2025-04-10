@@ -1,0 +1,340 @@
+/* Estilos generales */
+body {
+    margin: 0;
+    font-family: Arial, sans-serif;
+    line-height: 1.6;
+    background-color: #f4f4f4;
+    color: #333;
+  }
+  
+  /*ENCABEZADO*/
+
+  header {
+    text-align: center;
+    background-color: #222;
+    color: #fff;
+    padding: 10px 20px;
+    position: relative;
+    z-index: 10; /* Coloca el encabezado en una capa superior */
+  }
+  nav ul {
+    display: flex;
+    justify-content: space-around;
+  }
+  
+  
+  nav ul li {
+    margin: 0 10px;
+  }
+  
+  nav ul li a {
+    color: #fff;
+    text-decoration: none;
+    font-weight: bold;
+  }
+  
+  nav ul li a:hover {
+    text-decoration: underline;
+  }
+  
+  nav ul li a:focus {
+    outline: 2px dashed var(--accent-color);
+  }
+  
+  /* Estilos generales para la navegación */
+  .mega-menu {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    display: flex;
+  }
+  
+  .mega-menu > li {
+    position: relative; /* Necesario para posicionar el submenú */
+  }
+  
+  .mega-menu > li > a {
+    color: #fff;
+    text-decoration: none;
+    font-weight: bold;
+    padding: 10px 15px;
+    display: block;
+  }
+  
+  .mega-menu > li > a:hover {
+    background-color: #444;
+  }
+  
+  /* Estilo del submenú */
+  .mega-menu li ul {
+    display: none; /* Oculta el submenú por defecto */
+    position: absolute;
+    top: 100%; /* Coloca el submenú directamente debajo del enlace padre */
+    left: 0;
+    background-color: #fff;
+    list-style: none;
+    padding: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  }
+  
+  .mega-menu li ul li {
+    margin: 0;
+  }
+  
+  .mega-menu li ul li a {
+    color: #333;
+    text-decoration: none;
+    padding: 8px 12px;
+    display: block;
+  }
+  
+  .mega-menu li ul li a:hover {
+    background-color: #eee;
+  }
+  
+  /* Mostrar el submenú al pasar el ratón */
+  .mega-menu > li:hover > ul {
+    display: block;
+  }
+  
+  h2 {
+    text-align: center;
+    margin-bottom: 20px;
+  }
+  
+  h1, h2 {
+    margin: 0 0 20px;
+  }
+  /**/
+
+
+  .trainer-container {
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+    flex-wrap: wrap;
+  }
+  
+  .trainer-card {
+    width: 250px;
+    height: 350px;
+    perspective: 1000px;
+  }
+  
+  .card-inner {
+    width: 100%;
+    height: 100%;
+    position: relative;
+    transform-style: preserve-3d;
+    transition: transform 0.6s;
+  }
+  
+  .trainer-card:hover .card-inner {
+    transform: rotateY(180deg);
+  }
+  
+  .card-front, .card-back {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    backface-visibility: hidden;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    background: #222;
+    color: white;
+    border-radius: 10px;
+    padding: 20px;
+  }
+  
+  .card-back {
+    transform: rotateY(180deg);
+  }
+
+  .trainer-card img {
+    width: 250px; /* Define un ancho uniforme */
+    height: 300px; /* Define una altura uniforme */
+    object-fit: cover; /* Asegura que la imagen no se distorsione */
+    border-radius: 10px; /* Opcional: bordes redondeados */
+  }
+  
+  /* Barra de habilidades animada */
+  .skill-bar {
+    width: 100px;
+    height: 20px;
+    background: #ddd;
+    border-radius: 5px;
+    overflow: hidden;
+  }
+  
+  .skill-level {
+    height: 100%;
+    background: #28a745;
+    animation: fillAnimation 2s forwards;
+  }
+  
+
+
+  /* Estrellas de calificación animadas */
+  .stars {
+    display: flex;
+    gap: 5px;
+  }
+  
+  .star {
+    font-size: 30px;
+    color: #bbb;
+    transition: color 0.3s;
+  }
+  @keyframes fillFuerzaJohn {
+    from { width: 0; }
+    to { width: 90%; }
+  }
+  
+  @keyframes fillCardioJohn {
+    from { width: 0; }
+    to { width: 85%; }
+  }
+  
+  @keyframes fillFlexibilidadJane {
+    from { width: 0; }
+    to { width: 95%; }
+  }
+  
+  @keyframes fillCoreJane {
+    from { width: 0; }
+    to { width: 85%; }
+  }
+/* Barra de habilidades de John */
+.fuerza-john {
+  width: 90%;
+  background: red;
+  animation: fillAnimation 2s forwards;
+}
+.cardio-john {
+  width: 85%;
+  background: orange;
+  animation: fillAnimation 2s forwards;
+}
+
+/* Barra de habilidades de Jane */
+.flexibilidad-jane {
+  width: 95%;
+  background: blue;
+  animation: fillAnimation 2s forwards;
+}
+.core-jane {
+  width: 85%;
+  background: teal;
+  animation: fillAnimation 2s forwards;
+}
+/* Barra de habilidades de Michael */
+.fuerza-michael {
+  width: 85%; /* Representa su habilidad en fuerza */
+  background: red;
+  animation: fillAnimation 2s forwards;
+}
+.cardio-michael {
+  width: 90%;
+  background: orange;
+  animation: fillAnimation 2s forwards;
+}
+
+/* Barra de habilidades de Samantha */
+.flexibilidad-samantha {
+  width: 95%;
+  background: blue;
+  animation: fillAnimation 2s forwards;
+}
+.core-samantha {
+  width: 85%;
+  background: teal;
+  animation: fillAnimation 2s forwards;
+}
+
+/* Barra de habilidades de David */
+.resistencia-david {
+  width: 88%;
+  background: purple;
+  animation: fillAnimation 2s forwards;
+}
+.cardio-david {
+  width: 92%;
+  background: green;
+  animation: fillAnimation 2s forwards;
+}
+.trainer3 .star:hover,
+.trainer3 .star:hover ~ .star {
+  color: gold; /* Michael Johnson */
+}
+
+.trainer4 .star:hover,
+.trainer4 .star:hover ~ .star {
+  color: pink; /* Samantha Lee */
+}
+
+.trainer5 .star:hover,
+.trainer5 .star:hover ~ .star {
+  color: purple; /* David Gomez */
+}
+/* Barra de habilidades de John */
+.fuerza-john {
+  width: 90%;
+  background: red;
+  animation: fillAnimation 2s forwards;
+}
+.cardio-john {
+  width: 85%;
+  background: orange;
+  animation: fillAnimation 2s forwards;
+}
+
+/* Barra de habilidades de Jane */
+.flexibilidad-jane {
+  width: 95%;
+  background: blue;
+  animation: fillAnimation 2s forwards;
+}
+.core-jane {
+  width: 85%;
+  background: teal;
+  animation: fillAnimation 2s forwards;
+}
+/* ----------------------------- */
+/* Pie de página (Footer) */
+/* ----------------------------- */
+footer {
+  background-color: #222;
+  color: #fff;
+  padding: 20px;
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+footer form {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+footer .social-links a {
+  color: #fff;
+  margin-right: 10px;
+  text-decoration: none;
+}
+
+footer .social-links a:hover {
+  text-decoration: underline;
+}
+
+footer .map iframe {
+  width: 100%;
+  height: 300px;
+  border: none;
+}
+
+footer .social-links a:focus {
+  outline: 2px solid var(--accent-color);
+}

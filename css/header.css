@@ -1,0 +1,90 @@
+
+
+nav ul {
+    display: flex;
+    justify-content: space-around;
+  }
+  
+  
+  nav ul li {
+    margin: 0 10px;
+  }
+  
+  nav ul li a {
+    color: #fff;
+    text-decoration: none;
+    font-weight: bold;
+  }
+  
+  nav ul li a:hover {
+    text-decoration: underline;
+  }
+  
+  nav ul li a:focus {
+    outline: 2px dashed var(--accent-color);
+  }
+  
+  /* Estilos del encabezado */
+  header {
+ 
+    color: #fff;
+    padding: 10px 20px;
+    position: relative;
+    z-index: 100; /* Coloca el encabezado en una capa superior */
+  }
+  
+  /* Estilos generales para la navegación */
+  .mega-menu {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    display: flex;
+  }
+  
+  .mega-menu > li {
+    position: relative; /* Necesario para posicionar el submenú */
+  }
+  
+  .mega-menu > li > a {
+    color: #fff;
+    text-decoration: none;
+    font-weight: bold;
+    padding: 10px 15px;
+    display: block;
+  }
+  
+  .mega-menu > li > a:hover {
+    background-color: #444;
+  }
+  
+  /* Estilo del submenú */
+  .mega-menu li ul {
+    display: none; /* Oculta el submenú por defecto */
+    position: absolute;
+    top: 100%; /* Coloca el submenú directamente debajo del enlace padre */
+    left: 0;
+    background-color: #fff;
+    list-style: none;
+    padding: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  }
+  
+  .mega-menu li ul li {
+    margin: 0;
+  }
+  
+  .mega-menu li ul li a {
+    color: #333;
+    text-decoration: none;
+    padding: 8px 12px;
+    display: block;
+  }
+  
+  .mega-menu li ul li a:hover {
+    background-color: #eee;
+  }
+  
+  /* Mostrar el submenú al pasar el ratón */
+  .mega-menu > li:hover > ul {
+    display: block;
+  }

@@ -1,0 +1,176 @@
+/* Estilos Generales */
+*{
+  color: #333;
+}
+
+body {
+  font-family: Arial, sans-serif;
+  margin: 0;
+  padding: 0;
+  background-color: #f9f9f9;
+  color: #333;
+}
+
+/* Contenedor Principal */
+.container {
+  display: grid;
+  grid-template-columns: 1fr 3fr;
+  gap: 2rem;
+  max-width: 1200px;
+  margin: 2rem auto;
+  padding: 0 2rem;
+}
+
+/* Sidebar con filtros */
+.sidebar {
+  background: #fff;
+  padding: 2rem;
+  border-radius: 15px;
+  color: #333;
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+  height: auto; /* Evita que afecte el diseño */
+}
+
+.sidebar h2 {
+  font-size: 1.5rem;
+  font-weight: 700;
+  margin-bottom: 1rem;
+  text-transform: uppercase;
+}
+
+.sidebar ul {
+  list-style: none;
+}
+
+.sidebar label {
+  display: block;
+  padding: 0.8rem;
+  font-size: 1rem;
+  cursor: pointer;
+  transition: color 0.3s ease, background 0.3s ease;
+}
+
+.sidebar label:hover {
+  color: #4caf50;
+  background: rgba(255, 77, 77, 0.1);
+}
+
+/* Cards de Artículos */
+.articles {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  gap: 2rem;
+  min-height: 500px; /* Mantiene el tamaño */
+}
+
+/* Estilo de cada artículo */
+.article {
+
+  background: #fff;
+  padding: 1.5rem;
+  border-radius: 10px;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+  opacity: 0;
+  visibility: hidden;
+  transition: opacity 0.3s ease, visibility 0.3s ease, transform 0.3s ease;
+  z-index: 5;
+}
+
+/* Efecto Scroll Reveal */
+.article.reveal {
+  opacity: 1;
+  visibility: visible;
+  transform: translateY(0);
+}
+
+.article img {
+  width: 100%;
+  height: 150px;
+  object-fit: cover;
+  border-radius: 10px;
+  margin-bottom: 1rem;
+}
+
+.article h2 {
+  font-size: 1.6rem;
+  font-weight: 700;
+  color: #333;
+}
+
+.article p {
+  color: #666;
+  font-size: 1rem;
+  margin-bottom: 1rem;
+}
+
+/* Filtrado por Categoría */
+#all-cat:checked ~ .articles .article {
+  opacity: 1;
+  visibility: visible;
+}
+
+#nutricion:checked ~ .articles .article:not([data-category="nutricion"]),
+#entrenamiento:checked ~ .articles .article:not([data-category="entrenamiento"]),
+#salud:checked ~ .articles .article:not([data-category="salud"]),
+#estilo-de-vida:checked ~ .articles .article:not([data-category="estilo-de-vida"]) {
+  opacity: 0;
+  visibility: hidden;
+}
+
+/* Comentarios estilizados */
+.comments {
+  padding: 1.5rem;
+  background: #fff;
+  border-radius: 10px;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+}
+
+.comment {
+  display: flex;
+  align-items: flex-start;
+  gap: 1rem;
+  margin-bottom: 1rem;
+}
+
+.avatar {
+  width: 40px;
+  height: 40px;
+  background: linear-gradient(to right, #4caf50, #2e8b57);
+  border-radius: 50%;
+  position: relative;
+}
+
+.avatar::before {
+  content: '';
+  position: absolute;
+  width: 20px;
+  height: 20px;
+  background: #fff;
+  border-radius: 50%;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+
+/* Botón de Alternar Modo Oscuro */
+button {
+  background: #4caf50;
+  color: #fff;
+  border: none;
+  padding: 0.8rem 1rem;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: background 0.3s ease;
+}
+
+button:hover {
+  background: #388e3c;
+}
+
+/* Ocultar todos los artículos por defecto */
+.article {
+  opacity: 0;
+  visibility: hidden;
+  transition: opacity 0.3s ease, visibility 0.3s ease, transform 0.3s ease;
+}
+
