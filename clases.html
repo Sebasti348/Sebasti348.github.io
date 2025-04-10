@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Página de Clases</title>
+  <link rel="stylesheet" href="css/clases.css">
+</head>
+<body>
+
+    <header>
+        <nav>
+          <ul class="mega-menu">
+            <li>
+              <a href="#">Opciones</a>
+              <ul>
+                <li><a href="index.html">Inicio</a></li> <!-- Link hacia la Página de Clases -->
+                <li><a href="entrenadores.html">Entrenadores</a></li>
+                <li><a href="#">Precios</a></li>
+                <li><a href="contacto.html">Contacto</a></li>
+              </ul>
+            </li>
+          </ul>
+        </nav>
+      </header>
+
+
+  <!-- Filtrado por Categoría -->
+  <section class="class-filter">
+    <h2>Filtrar por Categoría</h2>
+    <div class="filters">
+      <input type="radio" id="musculacion" name="filter" checked>
+      <label for="musculacion">Musculación</label>
+
+      <input type="radio" id="crossfit" name="filter">
+      <label for="crossfit">CrossFit</label>
+
+      <input type="radio" id="yoga" name="filter">
+      <label for="yoga">Yoga</label>
+
+      <input type="radio" id="spinning" name="filter">
+      <label for="spinning">Spinning</label>
+
+      <div class="gallery">
+        <div class="item musculacion"><img src="images/filtrado/mus1.png" alt="Musculación"></div>
+        <div class="item crossfit"><img src="images/filtrado/cros1.jpg" alt="CrossFit"></div>
+        <div class="item yoga"><img src="images/filtrado/yog1.avif" alt="Yoga"></div>
+        <div class="item spinning"><img src="images/filtrado/spi1.webp" alt="Spinning"></div>
+      </div>
+    </div>
+
+  </section>
+
+  <!-- Tarjetas con Información de Clases -->
+  <section class="classes">
+    <h2>Clases Destacadas</h2>
+    <div class="card-container">
+      <div class="card">
+        <h3>CrossFit</h3>
+        <p>Entrenamiento funcional intensivo.</p>
+      </div>
+      <div class="card">
+        <h3>Yoga</h3>
+        <p>Equilibrio entre cuerpo y mente.</p>
+      </div>
+      <div class="card">
+        <h3>Spinning</h3>
+        <p>Clases llenas de energía.</p>
+      </div>
+    </div>
+  </section>
+  <!-- Galería Masonry -->
+  <section class="masonry-gallery">
+    <div><img src="images/imagen1.jpg" alt="Clase 1"></div>
+    <div><img src="images/imagen2.jpg" alt="Clase 2"></div>
+    <div><img src="images/imagen3.jpg" alt="Clase 3"></div>
+    <div><img src="images/imagen4.jpg" alt="Clase 4"></div>
+  </section>
+
+  <!-- Tabla de Horarios Semanales -->
+  <section class="schedule">
+    <h2>Horarios Semanales</h2>
+    <table>
+      <thead>
+        <tr>
+          <th>Día</th>
+          <th>9:00</th>
+          <th>12:00</th>
+          <th>18:00</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td>Lunes</td>
+          <td>Yoga</td>
+          <td>CrossFit</td>
+          <td>Spinning</td>
+        </tr>
+        <tr>
+          <td>Martes</td>
+          <td>Musculación</td>
+          <td>Yoga</td>
+          <td>CrossFit</td>
+        </tr>
+      </tbody>
+    </table>
+  </section>
+</body>
+</html>

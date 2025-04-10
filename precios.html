@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Comparador de Planes</title>
+  <link rel="stylesheet" href="css/precios.css">
+</head>
+<body>
+    <header>
+        <nav>
+          <ul class="mega-menu">
+            <li>
+              <a href="#">Opciones</a>
+              <ul>
+                <li><a href="clases.html">Clases</a></li> <!-- Link hacia la Página de Clases -->
+                <li><a href="entrenadores.html">Entrenadores</a></li>
+                <li><a href="precios.html">Precios</a></li>
+                <li><a href="contacto.html">Contacto</a></li>
+              </ul>
+            </li>
+          </ul>
+        </nav>
+        <h1>Planes y Precios</h1>
+    <label class="toggle">
+      <input type="checkbox" id="toggle-switch">
+      <span class="slider"></span>
+      <span class="toggle-label">Mensual / Anual</span>
+    </label>
+    </header>
+
+
+  <main>
+    <section class="pricing-table">
+      <div class="pricing-card">
+        <h2>Básico</h2>
+        <p class="price mensual" data-tooltip="Incluye acceso limitado">$500</p>
+        <p class="price anual" data-tooltip="Incluye acceso limitado">$5000</p>
+        <ul>
+          <li>Acceso a máquinas</li>
+          <li>1 clase grupal semanal</li>
+        </ul>
+      </div>
+
+      <div class="pricing-card">
+        <h2>Estándar</h2>
+        <p class="price mensual" data-tooltip="Incluye acceso a todas las clases grupales">$800</p>
+        <p class="price anual" data-tooltip="Incluye acceso a todas las clases grupales">$8000</p>
+        <ul>
+          <li>Acceso a máquinas y clases grupales</li>
+          <li>3 clases grupales semanales</li>
+        </ul>
+      </div>
+
+      <div class="pricing-card">
+        <h2>Premium</h2>
+        <p class="price mensual" data-tooltip="Incluye entrenador personal">$1200</p>
+        <p class="price anual" data-tooltip="Incluye entrenador personal">$12000</p>
+        <ul>
+          <li>Acceso ilimitado</li>
+          <li>Clases ilimitadas</li>
+          <li>Entrenador personal</li>
+        </ul>
+      </div>
+    </section>
+  </main>
+
+  <script src="js/precio.js"></script>
+</body>
+</html>
