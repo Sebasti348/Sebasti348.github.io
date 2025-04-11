@@ -13,24 +13,25 @@
 
   <header>
     <nav>
-      <div class="loco-container"><a href="index.html"><img src="images/logo.png" alt="Logo" class="menu-logo"></a></div>
+      <div class="loco-container">
+        <a href="index.html"><img src="images/logo.png" alt="Logo" class="menu-logo"></a>
+      </div>
       <ul class="mega-menu">
+        <li class="nav-links">
+          <a href="blog.html">Blog</a>
+          <a href="contacto.html">Contacto</a>
+        </li>
         <li>
-
           <a href="#">Opciones</a>
           <ul>
-           
+            <li><a href="clases.html">Clases</a></li>
             <li><a href="entrenadores.html">Entrenadores</a></li>
             <li><a href="precios.html">Precios</a></li>
-            <li><a href="contacto.html">Contacto</a></li>
-            <li><a href="blog.html">Blog</a></li> 
           </ul>
         </li>
       </ul>
-      
-      <button id="toggle-modo" aria-label="Alternar modo oscuro">🌙</button>
+      <button id="toggle-modo" aria-label="Alternar modo oscuro">☀️</button>
     </nav>
-
   </header>
 
 
@@ -52,9 +53,17 @@
 
       <div class="gallery">
         <div class="item musculacion"><img src="images/filtrado/mus1.png" alt="Musculación"></div>
-        <div class="item crossfit"><img src="images/filtrado/cros1.jpg" alt="CrossFit"></div>
-        <div class="item yoga"><img src="images/filtrado/yog1.avif" alt="Yoga"></div>
+        <div class="item crossfit"><img src="images/filtrado/cros2.jpg" alt="CrossFit"></div>
         <div class="item spinning"><img src="images/filtrado/spi1.webp" alt="Spinning"></div>
+        <div class="item crossfit"><img src="images/filtrado/cros1.jpg" alt="CrossFit"></div>
+        <div class="item spinning"><img src="images/filtrado/spi3.jpg" alt="Spinning"></div>
+        <div class="item yoga"><img src="images/filtrado/yog1.avif" alt="Yoga"></div>
+        <div class="item musculacion"><img src="images/filtrado/img8.jpg" alt="Musculación"></div>
+        <div class="item yoga"><img src="images/filtrado/yoga10.avif" alt="Yoga"></div>
+        <div class="item musculacion"><img src="images/filtrado/mus2.webp" alt="Musculación"></div>
+        <div class="item crossfit"><img src="images/filtrado/cros3.jpg" alt="CrossFit"></div>
+        <div class="item spinning"><img src="images/filtrado/spi2.jpg" alt="Spinning"></div>
+        <div class="item yoga"><img src="images/filtrado/yog3.jpg" alt="Yoga"></div>
       </div>
     </div>
 
@@ -78,18 +87,11 @@
       </div>
     </div>
   </section>
-  <!-- Galería Masonry -->
-  <section class="masonry-gallery">
-    <div><img src="images/imagen1.jpg" alt="Clase 1"></div>
-    <div><img src="images/imagen2.jpg" alt="Clase 2"></div>
-    <div><img src="images/imagen3.jpg" alt="Clase 3"></div>
-    <div><img src="images/imagen4.jpg" alt="Clase 4"></div>
-  </section>
 
   <!-- Tabla de Horarios Semanales -->
   <section class="schedule">
     <h2>Horarios Semanales</h2>
-    <table>
+    <table class="styled-table">
       <thead>
         <tr>
           <th>Día</th>
@@ -111,36 +113,65 @@
           <td>Yoga</td>
           <td>CrossFit</td>
         </tr>
+        <tr>
+          <td>Miércoles</td>
+          <td>Spinning</td>
+          <td>Musculación</td>
+          <td>Yoga</td>
+        </tr>
+        <tr>
+          <td>Jueves</td>
+          <td>CrossFit</td>
+          <td>Spinning</td>
+          <td>Musculación</td>
+        </tr>
+        <tr>
+          <td>Viernes</td>
+          <td>Yoga</td>
+          <td>CrossFit</td>
+          <td>Spinning</td>
+        </tr>
+        <tr>
+          <td>Sábado</td>
+          <td>Musculación</td>
+          <td>Yoga</td>
+          <td>CrossFit</td>
+        </tr>
       </tbody>
     </table>
-    <footer>
-      <div class="newsletter">
-          <h3>SUSCRÍBETE A NUESTRO BOLETÍN</h3>
-          <form>
-              <input type="email" placeholder="Correo electrónico">
-              <button type="submit">SUSCRIBIRSE</button>
-          </form>
-      </div>
-  
-      <div class="social-media">
-          <h3>Conecta con nosotros</h3>
-          <ul>
-              <li><a href="#">Facebook</a></li>
-              <li><a href="#">Instagram</a></li>
-              <li><a href="#">Twitter</a></li>
-          </ul>
-      </div>
-  
-      <div class="location">
-          <h3>NUESTRA UBICACIÓN</h3>
-          <iframe src="https://www.google.com/maps/embed?..." width="200" height="150" allowfullscreen="" loading="lazy"></iframe>
-      </div>
-  
-      <div class="copyright">
-          <p>© 2025 Masters of Gym. Todos los derechos reservados.</p>
-      </div>
-  </footer>
   </section>
+         <!-- ============ FOOTER ============ -->
+         <footer>
+          <div class="footer-container">
+            <!-- Redes Sociales -->
+            <div class="footer-section social-media">
+              <h3>Conecta con nosotros</h3>
+              <ul>
+                <li><a href="#">Facebook</a></li>
+                <li><a href="#">Instagram</a></li>
+                <li><a href="#">Twitter</a></li>
+              </ul>
+            </div>
+        
+            <!-- Formulario de Suscripción -->
+            <div class="footer-section newsletter">
+              <h3>SUSCRÍBETE A NUESTRO BOLETÍN</h3>
+              <form>
+                <input type="email" placeholder="Correo electrónico">
+                <button type="submit">SUSCRIBIRSE</button>
+              </form>
+            </div>
+        
+            <!-- Minimapa -->
+            <div class="footer-section location">
+              <h3>NUESTRA UBICACIÓN</h3>
+              <iframe src="https://www.google.com/maps/embed?..." allowfullscreen="" loading="lazy"></iframe>
+            </div>
+          </div>
+          <div class="footer-bottom">
+            <p>© 2025 Masters of Gym. Todos los derechos reservados.</p>
+          </div>
+        </footer>
   <script src="js/mod.js"></script>
 </body>
 </html>
