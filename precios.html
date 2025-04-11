@@ -33,41 +33,55 @@
     </nav>
   </header>
 
+  <section class="contenedor">
+    <h1>Planes de Membresía</h1>
 
-  <main>
-    <section class="pricing-table">
-      <div class="pricing-card">
+    <!-- Toggle con label asociado -->
+    <input type="checkbox" id="toggle-plan" hidden />
+    <div class="toggle-precios">
+      <label for="toggle-plan" class="switch">
+        <span class="slider"></span>
+      </label>
+      <span class="etiqueta">Mensual / Anual</span>
+    </div>
+
+    <!-- Contenedor que depende del toggle -->
+    <div class="tabla-precios ">
+      <div class="columna">
         <h2>Básico</h2>
-        <p class="price mensual" data-tooltip="Incluye acceso limitado">$500</p>
-        <p class="price anual" data-tooltip="Incluye acceso limitado">$5000</p>
+        <p class="precio" data-mensual="$3000" data-anual="$20000"></p>
         <ul>
-          <li>Acceso a máquinas</li>
-          <li>1 clase grupal semanal</li>
+          <li><span class="tooltip">Acceso al gimnasio <span class="tip">Incluye acceso ilimitado</span></span></li>
+          <li><span class="tooltip">1 clase grupal <span class="tip">Zumba, funcional, etc.</span></span></li>
+          <li><span class="tooltip">Sin entrenador <span class="tip">Solo asistencia general</span></span></li>
         </ul>
+        <a href="#" class="btn">Elegir</a>
       </div>
 
-      <div class="pricing-card">
-        <h2>Estándar</h2>
-        <p class="price mensual" data-tooltip="Incluye acceso a todas las clases grupales">$800</p>
-        <p class="price anual" data-tooltip="Incluye acceso a todas las clases grupales">$8000</p>
+      <div class="columna destacada">
+        <h2>Pro</h2>
+        <p class="precio" data-mensual="$6500" data-anual="$35000"></p>
         <ul>
-          <li>Acceso a máquinas y clases grupales</li>
-          <li>3 clases grupales semanales</li>
+          <li><span class="tooltip">Acceso completo <span class="tip">Zona de pesas y clases</span></span></li>
+          <li><span class="tooltip">3 clases semanales <span class="tip">HIIT, funcional, yoga</span></span></li>
+          <li><span class="tooltip">1 entrenador mensual <span class="tip">Seguimiento básico</span></span></li>
         </ul>
+        <a href="#" class="btn">Elegir</a>
       </div>
 
-      <div class="pricing-card">
-        <h2>Premium</h2>
-        <p class="price mensual" data-tooltip="Incluye entrenador personal">$1200</p>
-        <p class="price anual" data-tooltip="Incluye entrenador personal">$12000</p>
+      <div class="columna">
+        <h2>Elite</h2>
+        <p class="precio" data-mensual="$10000" data-anual="$50000"></p>
         <ul>
-          <li>Acceso ilimitado</li>
-          <li>Clases ilimitadas</li>
-          <li>Entrenador personal</li>
+          <li><span class="tooltip">Acceso VIP <span class="tip">Con SPA y áreas exclusivas</span></span></li>
+          <li><span class="tooltip">Clases ilimitadas <span class="tip">Todos los horarios</span></span></li>
+          <li><span class="tooltip">Entrenador personal <span class="tip">4 sesiones/mes</span></span></li>
         </ul>
+        <a href="#" class="btn">Elegir</a>
       </div>
-    </section>
-  </main>
+    </div>
+  </section>
+
     <!-- ============ FOOTER ============ -->
     <footer>
       <div class="footer-container">
@@ -101,7 +115,7 @@
       </div>
     </footer>
 
-  <script src="js/precio.js"></script>
+  
   <script src="js/mod.js"></script>
 </body>
 </html>
