@@ -1,90 +1,117 @@
-
-
-nav ul {
-    display: flex;
-    justify-content: space-around;
-  }
-  
-  
-  nav ul li {
-    margin: 0 10px;
-  }
-  
-  nav ul li a {
-    color: #fff;
-    text-decoration: none;
-    font-weight: bold;
-  }
-  
-  nav ul li a:hover {
-    text-decoration: underline;
-  }
-  
-  nav ul li a:focus {
-    outline: 2px dashed var(--accent-color);
-  }
-  
-  /* Estilos del encabezado */
-  header {
- 
-    color: #fff;
-    padding: 10px 20px;
-    position: relative;
+/* Estilo General del Header */
+header {
+    background-color: var(--color-fondo, #fff); /* Fondo blanco por defecto */
+    color: var(--color-texto, #333);
+    padding: 1rem 2rem;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1); /* Sombra sutil */
+    position: relative; /* Asegura que esté sobre otros elementos */
     z-index: 100; /* Coloca el encabezado en una capa superior */
   }
   
-  /* Estilos generales para la navegación */
-  .mega-menu {
-    list-style: none;
-    margin: 0;
-    padding: 0;
+  /* Barra de navegación */
+  nav {
     display: flex;
+    align-items: center; /* Centra verticalmente los elementos */
+    justify-content: space-between; /* Distribuye elementos: izquierda, centro y derecha */
+
+  }
+  body:not(.modo-oscuro) .menu-logo {
+    content: url("../images/logoWhite.png");
+    width: 100px;
+    height: 100px;
+    display: block;
+}
+
+body.modo-oscuro .menu-logo {
+    content: url("../images/logoDark.png");
+    width: 100px;
+    height: 100px;
+    display: block;
+}
+  /* Logo a la izquierda */
+  .menu-logo  {
+    width: 100px; /* Ajusta el tamaño del logo */
+    height: auto; /* Mantiene proporciones correctas */
+    margin-right: 10px; /* Espaciado entre el logo y otros elementos */
   }
   
-  .mega-menu > li {
-    position: relative; /* Necesario para posicionar el submenú */
+  /* Menú de opciones centrado */
+  ul.mega-menu {
+    flex: 1; /* Permite que ocupe el espacio central */
+    display: flex;
+    justify-content: center; /* Centra el contenido horizontalmente */
+    align-items: center;
+    list-style: none; /* Elimina los puntos de la lista */
+    padding: 0;
+    margin: 0;
+    gap: 2rem; /* Espaciado entre las opciones */
   }
   
-  .mega-menu > li > a {
-    color: #fff;
+  ul.mega-menu > li {
+    position: relative; /* Necesario para el submenú desplegable */
+  }
+  
+  ul.mega-menu > li > a {
     text-decoration: none;
+    color: var(--color-texto, #333); /* Color del texto */
     font-weight: bold;
     padding: 10px 15px;
     display: block;
+    transition: color 0.3s ease, background-color 0.3s ease;
   }
   
-  .mega-menu > li > a:hover {
-    background-color: #444;
+  ul.mega-menu > li > a:hover {
+    color: var(--color-primario, #4caf50); /* Cambia el color al pasar el mouse */
+    background-color: #f0f0f0; /* Fondo ligero */
   }
   
-  /* Estilo del submenú */
-  .mega-menu li ul {
-    display: none; /* Oculta el submenú por defecto */
+  /* Submenú desplegable */
+  ul.mega-menu > li > ul {
+    display: none; /* Oculto por defecto */
     position: absolute;
-    top: 100%; /* Coloca el submenú directamente debajo del enlace padre */
-    left: 0;
-    background-color: #fff;
+    top: 100%; /* Coloca el submenú debajo del enlace padre */
+    left: 50%;
+    transform: translateX(-50%); /* Centra el submenú debajo del padre */
+    background-color: var(--color-fondo); /* Fondo blanco */
+    border-radius: 5px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Sombra para el submenú */
     list-style: none;
     padding: 10px;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    z-index: 1000; /* Asegura que el submenú quede sobre otros elementos */
   }
   
-  .mega-menu li ul li {
+  ul.mega-menu > li:hover > ul {
+    display: block; /* Muestra el submenú al pasar el mouse */
+  }
+  
+  ul.mega-menu > li > ul > li {
     margin: 0;
   }
   
-  .mega-menu li ul li a {
-    color: #333;
+  ul.mega-menu > li > ul > li > a {
     text-decoration: none;
+    color: var(--color-texto, #333);
     padding: 8px 12px;
     display: block;
+    transition: color 0.3s ease, background-color 0.3s ease;
   }
   
-  .mega-menu li ul li a:hover {
-    background-color: #eee;
+  ul.mega-menu > li > ul > li > a:hover {
+    background-color: #f0f0f0; /* Fondo ligero en hover */
   }
   
-  /* Mostrar el submenú al pasar el ratón */
-  .mega-menu > li:hover > ul {
-    display: block;
+  /* Botón de modo oscuro alineado a la derecha */
+  #toggle-modo {
+    background-color: var(--color-primario, #4caf50); /* Fondo verde */
+    color: #fff; /* Texto blanco */
+    border: none;
+    padding: 0.6rem 1rem;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
   }
+  
+  #toggle-modo:hover {
+    background-color: var(--color-secundario, #388e3c); /* Oscurece el verde en hover */
+  }
+ 

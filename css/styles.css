@@ -2,20 +2,29 @@
 :root {
   --color-fondo: #ffffff;
   --color-texto: #333333;
+  --color-card: #fff;
+  --color-card1: #c2c2c2;
   --color-primario: #4caf50;
   --color-secundario: #ff9800;
+  --color-counter: #ddd;
+  --color-carousel: #f9f9f9;
 }
 
 /* Tema oscuro */
 .modo-oscuro {
-  --color-fondo: #121212;
+  --color-fondo: #000;
   --color-texto: #f1f1f1;
+  --color-card: #000;
+  --color-card1: #313130;
   --color-primario: #388e3c;
   --color-secundario: #f57c00;
+  --color-counter: #3a3636;
+  --color-carousel:#5a5050;
 }
 
+
 /* Usar las variables */
-body {
+body {    
   background-color: var(--color-fondo);
   color: var(--color-texto);
 }
@@ -98,7 +107,7 @@ ul {
 }
 
 .classes .card {
-  background-color: #fff;
+  background-color: var(--color-card);
   padding: 15px;
   border-radius: 10px;
   box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
@@ -142,7 +151,7 @@ ul {
 /* ----------------------------- */
 .counter {
   text-align: center;
-  background-color: #ddd;
+  background-color: var(--color-counter);
   padding: 20px;
 }
 
@@ -168,7 +177,7 @@ ul {
 /* ----------------------------- */
 .testimonials {
   padding: 20px;
-  background-color: #f9f9f9;
+  background-color: var(--color-carousel);
 }
 
 .testimonials .carousel {
@@ -178,7 +187,7 @@ ul {
 }
 
 .testimonials .testimonial {
-  background-color: #fff;
+  background-color: var(--color-card);
   padding: 10px;
   border-radius: 10px;
   box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
