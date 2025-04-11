@@ -1,236 +1,184 @@
 /* Estilos generales */
 body {
-    font-family: Arial, sans-serif;
-    margin: 0;
-    padding: 0;
-    text-align: center;
-    background-color: #f9f9f9;
-    color: #333;
-  }
-  /*ENCABEZADODDODO*/
-  /* Estilos generales para la navegación */
-.mega-menu {
-    list-style: none;
-    margin: 0;
-    padding: 0;
-    display: flex;
-  }
-  
-  .mega-menu > li {
-    position: relative; /* Necesario para posicionar el submenú */
-  }
-  
-  .mega-menu > li > a {
-    color: #fff;
-    text-decoration: none;
-    font-weight: bold;
-    padding: 10px 15px;
-    display: block;
-  }
-  
-  .mega-menu > li > a:hover {
-    background-color: #444;
-  }
-  
-  /* Estilo del submenú */
-  .mega-menu li ul {
-    display: none; /* Oculta el submenú por defecto */
-    position: absolute;
-    top: 100%; /* Coloca el submenú directamente debajo del enlace padre */
-    left: 0;
-    background-color: #fff;
-    list-style: none;
-    padding: 10px;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-    
-  }
-  
-  .mega-menu li ul li {
-    margin: 0;
-    
+  font-family: Arial, sans-serif;
+  margin: 0;
+  padding: 0;
+  text-align: center;
+  background-color: #f9f9f9;
+  color: #333;
 }
-  
-  .mega-menu li ul li a {
-    color: #333;
-    text-decoration: none;
-    padding: 8px 12px;
-    display: block;
-    
-  }
-  
-  .mega-menu li ul li a:hover {
-    background-color: #eee;
-    
-  }
-  
-  /* Mostrar el submenú al pasar el ratón */
-  .mega-menu > li:hover > ul {
-    display: block;
-    
-  }
-  nav ul {
-    display: flex;
-    justify-content: space-around;
-  }
-  
-  
-  nav ul li {
-    margin: 0 10px;
-  }
-  
-  nav ul li a {
-    color: #fff;
-    text-decoration: none;
-    font-weight: bold;
-  }
-  
-  nav ul li a:hover {
-    text-decoration: underline;
-  }
-  
-  nav ul li a:focus {
-    outline: 2px dashed var(--accent-color);
-  }
-  
-  header {
-    background-color: #222;
-    color: #fff;
-    padding: 10px 20px;
-    position: relative;
-    z-index: 10; /* Coloca el encabezado en una capa superior */
-  }
-  
-  h1 {
-    margin-bottom: 10px;
-  }
 
-  /* Toggle entre Mensual y Anual */
-  .toggle {
-    display: inline-flex;
-    align-items: center;
-    gap: 10px;
-  }
-  
-  .toggle input[type="checkbox"] {
-    display: none;
-  }
-  
-  .toggle .slider {
-    width: 50px;
-    height: 25px;
-    background-color: #ccc;
-    border-radius: 50px;
-    position: relative;
-    cursor: pointer;
-    transition: background-color 0.3s;
-  }
-  
-  .toggle .slider::before {
-    content: '';
-    position: absolute;
-    width: 20px;
-    height: 20px;
-    background-color: #fff;
-    border-radius: 50%;
-    top: 50%;
-    left: 5px;
-    transform: translateY(-50%);
-    transition: left 0.3s;
-  }
-  
-  .toggle input[type="checkbox"]:checked + .slider {
-    background-color: #4caf50;
-  }
-  
-  .toggle input[type="checkbox"]:checked + .slider::before {
-    left: 25px;
-  }
-  
-  .toggle-label {
-    font-size: 0.9rem;
-    color: #555;
-  }
-  
-  /* Tabla de Precios */
+/* ========== TOGGLE DE PLANES (MENSUAL/ANUAL) ========== */
+#toggle-plan {
+  display: none;
+}
+
+.toggle-precios {
+  margin-top: 2rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 1rem;
+  margin-bottom: 2rem;
+}
+
+.switch {
+  position: relative;
+  display: inline-block;
+  width: 50px;
+  height: 28px;
+  background: #ccc;
+  border-radius: 34px;
+  cursor: pointer;
+  transition: background 0.3s;
+}
+
+.slider {
+  position: absolute;
+  height: 20px;
+  width: 20px;
+  left: 4px;
+  top: 4px;
+  background: white;
+  border-radius: 50%;
+  transition: 0.3s;
+}
+
+#toggle-plan:checked+.toggle-precios .switch {
+  background-color: #f44336;
+}
+
+#toggle-plan:checked+.toggle-precios .switch .slider {
+  transform: translateX(22px);
+}
+
+.etiqueta {
+  font-size: 1rem;
+  font-weight: bold;
+}
+
+/* ========== TABLA DE PRECIOS ========== */
+.tabla-precios {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 2rem;
+}
+
+/* ========== COLUMNA INDIVIDUAL ========== */
+.columna {
+  background-color: var(--color-card);
+  padding: 2rem;
+  width: 300px;
+  border-radius: 12px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+  transition: transform 0.3s, box-shadow 0.3s;
+  text-align: center;
+  margin-bottom: 6rem;
+}
+
+.columna:hover {
+  transform: translateY(-10px);
+  box-shadow: 0 4px 100px rgba(88, 88, 88, 0.3);
+}
+
+.columna.destacada {
+  border: 2px solid #f44336;
+}
+
+.columna h2 {
+  font-size: 1.5rem;
+  margin-bottom: 1rem;
+}
+
+/* ========== PRECIO DINÁMICO ========== */
+.precio {
+  font-size: 2rem;
+  font-weight: bold;
+  color: #f44336;
+  margin-bottom: 1rem;
+  position: relative;
+}
+
+.precio::before {
+  content: attr(data-mensual);
+}
+
+#toggle-plan:checked~.tabla-precios .precio::before {
+  content: attr(data-anual);
+}
+
+/* ========== LISTA DE BENEFICIOS ========== */
+ul {
+  list-style: none;
+  text-align: left;
+  padding: 0;
+}
+
+.tabla-precios li {
+  margin: 0.7rem 0;
+  position: relative;
+  padding-left: 1.2rem;
+}
+
+.tabla-precios li::before {
+  content: "✔";
+  position: absolute;
+  left: 0;
+  color: #000000;
+}
+
+/* ========== TOOLTIPS DE INFORMACIÓN EXTRA ========== */
+.tooltip {
+  position: relative;
+  cursor: help;
+  display: inline-block;
+}
+
+.tip {
+  visibility: hidden;
+  opacity: 0;
+  position: absolute;
+  background: #222;
+  color: #fff;
+  text-align: center;
+  border-radius: 6px;
+  padding: 6px 10px;
+  bottom: 125%;
+  left: 50%;
+  transform: translateX(-50%);
+  width: max-content;
+  max-width: 200px;
+  transition: opacity 0.3s;
+  font-size: 0.8rem;
+  z-index: 10;
+}
+
+.tooltip:hover .tip {
+  visibility: visible;
+  opacity: 1;
+}
+
+/* ========== BOTÓN DE COMPRA/ACCIÓN ========== */
+.btn {
+  display: inline-block;
+  background-color: #272727;
+  color: white;
+  padding: 0.7rem 1.5rem;
+  border-radius: 6px;
+  text-decoration: none;
+  transition: background-color 0.3s;
+  font-weight: bold;
+}
+
+.btn:hover {
+  background-color: #f44336;
+}
+
+/* Diseño responsivo */
+@media (max-width: 768px) {
   .pricing-table {
-    display: flex;
-    justify-content: center;
-    gap: 20px;
-    flex-wrap: wrap;
-    margin: 20px;
+    flex-direction: column;
+    align-items: center;
   }
-  
-  .pricing-card {
-    background-color: var(--color-card1);
-    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
-    border-radius: 10px;
-    padding: 20px;
-    width: 300px;
-    transition: transform 0.3s, box-shadow 0.3s;
-    position: relative;
-    overflow: hidden;
-  }
-  
-  .pricing-card:hover {
-    transform: scale(1.05);
-    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.3);
-  }
-  
-  /* Precios */
-  .price {
-    font-size: 2rem;
-    font-weight: bold;
-    margin: 10px 0;
-    display: none;
-  }
-  
-  .price.mensual {
-    display: block; /* Mostrar solo los precios mensuales por defecto */
-  }
-  
-  /* Tooltips */
-  .price[data-tooltip] {
-    position: relative;
-  }
-  
-  .price[data-tooltip]::after {
-    content: attr(data-tooltip);
-    position: absolute;
-    bottom: -30px;
-    left: 50%;
-    transform: translateX(-50%);
-    background-color: #333;
-    color: #fff;
-    padding: 5px 10px;
-    font-size: 0.8rem;
-    border-radius: 5px;
-    opacity: 0;
-    visibility: hidden;
-    transition: opacity 0.3s, transform 0.3s;
-  }
-  
-  .price[data-tooltip]:hover::after {
-    opacity: 1;
-    visibility: visible;
-    transform: translate(-50%, -5px);
-  }
-  
-  /* Lista de características */
-  .pricing-card ul {
-    list-style: none;
-    padding: 0;
-    margin: 0;
-    text-align: left;
-  }
-  
-  .pricing-card li {
-    margin-bottom: 10px;
-  }
-  
-  /* Diseño responsivo */
-  @media (max-width: 768px) {
-    .pricing-table {
-      flex-direction: column;
-      align-items: center;
-    }
-  }
+}
