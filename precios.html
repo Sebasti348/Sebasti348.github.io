@@ -5,29 +5,36 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Comparador de Planes</title>
   <link rel="stylesheet" href="css/precios.css">
+  <link rel="stylesheet" href="css/header.css">
+  <link rel="stylesheet" href="css/footer.css">
+  <link rel="stylesheet" href="css/styles.css">
 </head>
 <body>
-    <header>
-        <nav>
-          <ul class="mega-menu">
-            <li>
-              <a href="#">Opciones</a>
-              <ul>
-                <li><a href="clases.html">Clases</a></li> <!-- Link hacia la Página de Clases -->
-                <li><a href="entrenadores.html">Entrenadores</a></li>
-                <li><a href="precios.html">Precios</a></li>
-                <li><a href="contacto.html">Contacto</a></li>
-              </ul>
-            </li>
+  <header>
+    <nav>
+      <div class="loco-container"><a href="index.html"><img src="images/logo.png" alt="Logo" class="menu-logo"></a></div>
+      <ul class="mega-menu">
+        <li>
+
+          <a href="#">Opciones</a>
+          <ul>
+            <li><a href="clases.html">Clases</a></li> 
+            <li><a href="entrenadores.html">Entrenadores</a></li>
+            <li><a href="precios.html">Precios</a></li>
+            <li><a href="contacto.html">Contacto</a></li>
           </ul>
-        </nav>
-        <h1>Planes y Precios</h1>
+        </li>
+      </ul>
+      
+      <button id="toggle-modo" aria-label="Alternar modo oscuro">🌙</button>
+    </nav>
     <label class="toggle">
       <input type="checkbox" id="toggle-switch">
       <span class="slider"></span>
       <span class="toggle-label">Mensual / Anual</span>
     </label>
-    </header>
+
+  </header>
 
 
   <main>
@@ -66,5 +73,6 @@
   </main>
 
   <script src="js/precio.js"></script>
+  <script src="js/mod.js"></script>
 </body>
 </html>

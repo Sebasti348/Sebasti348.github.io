@@ -5,24 +5,33 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Página de Clases</title>
   <link rel="stylesheet" href="css/clases.css">
+  <link rel="stylesheet" href="css/header.css">
+  <link rel="stylesheet" href="css/footer.css">
+  <link rel="stylesheet" href="css/styles.css">
 </head>
 <body>
 
-    <header>
-        <nav>
-          <ul class="mega-menu">
-            <li>
-              <a href="#">Opciones</a>
-              <ul>
-                <li><a href="index.html">Inicio</a></li> <!-- Link hacia la Página de Clases -->
-                <li><a href="entrenadores.html">Entrenadores</a></li>
-                <li><a href="#">Precios</a></li>
-                <li><a href="contacto.html">Contacto</a></li>
-              </ul>
-            </li>
+  <header>
+    <nav>
+      <div class="loco-container"><a href="index.html"><img src="images/logo.png" alt="Logo" class="menu-logo"></a></div>
+      <ul class="mega-menu">
+        <li>
+
+          <a href="#">Opciones</a>
+          <ul>
+           
+            <li><a href="entrenadores.html">Entrenadores</a></li>
+            <li><a href="precios.html">Precios</a></li>
+            <li><a href="contacto.html">Contacto</a></li>
+            <li><a href="blog.html">Blog</a></li> 
           </ul>
-        </nav>
-      </header>
+        </li>
+      </ul>
+      
+      <button id="toggle-modo" aria-label="Alternar modo oscuro">🌙</button>
+    </nav>
+
+  </header>
 
 
   <!-- Filtrado por Categoría -->
@@ -105,5 +114,6 @@
       </tbody>
     </table>
   </section>
+  <script src="js/mod.js"></script>
 </body>
 </html>

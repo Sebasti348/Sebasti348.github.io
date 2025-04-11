@@ -1,103 +1,160 @@
 <!DOCTYPE html>
-<html lang="es">
+<html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Blog de Fitness</title>
-    <link rel="stylesheet" href="css/blog.css">
+    <title>Document</title>
     <link rel="stylesheet" href="css/header.css">
     <link rel="stylesheet" href="css/footer.css">
-
+    <link rel="stylesheet" href="css/blog.css">
+    <link rel="stylesheet" href="css/styles.css">
 </head>
+
 <body>
-    <!-- Header -->
-    <header>
-      <nav>
-        <ul class="mega-menu">
-          <li>
-            <a href="#">Opciones</a>
-            <ul>
-              <li><a href="clases.html">Clases</a></li> <!-- Link hacia la Página de Clases -->
-              <li><a href="entrenadores.html">Entrenadores</a></li>
-              <li><a href="precios.html">Precios</a></li>
-              <li><a href="contacto.html">Contacto</a></li>
-              
-            </ul>
-          </li>
-        </ul>
-        
-        <button id="toggle-modo" aria-label="Alternar modo oscuro">🌙</button>
-      </nav>
+  <header>
+    <nav>
+      <div class="loco-container"><a href="index.html"><img src="images/logo.png" alt="Logo" class="menu-logo"></a></div>
+      <ul class="mega-menu">
+        <li>
 
-    <!-- Contenedor Principal -->
-    <section class="container">
-        <!-- Sidebar con filtros -->
-        <aside class="sidebar">
-            <h2>Filtrar por Categoría</h2>
-            <ul>
-                <li><input type="radio" name="category" id="all-cat" checked><label for="all-cat">Todas</label></li>
-                <li><input type="radio" name="category" id="nutricion"><label for="nutricion">Nutrición</label></li>
-                <li><input type="radio" name="category" id="entrenamiento"><label for="entrenamiento">Entrenamiento</label></li>
-                <li><input type="radio" name="category" id="salud"><label for="salud">Salud</label></li>
-                <li><input type="radio" name="category" id="estilo-de-vida"><label for="estilo-de-vida">Estilo de Vida</label></li>
-            </ul>
-        </aside>
+          <a href="#">Opciones</a>
+          <ul>
+            <li><a href="clases.html">Clases</a></li> 
+            <li><a href="entrenadores.html">Entrenadores</a></li>
+            <li><a href="precios.html">Precios</a></li>
+            <li><a href="contacto.html">Contacto</a></li>
+          </ul>
+        </li>
+      </ul>
+      
+      <button id="toggle-modo" aria-label="Alternar modo oscuro">🌙</button>
+    </nav>
 
-        <!-- Contenedor de Artículos -->
-        <main class="articles">
-            <article class="article reveal" data-category="nutricion">
-                <img src="images/nutricion.jpg" alt="Nutrición">
-                <h2><a href="#">Guía de Nutrición para Ganar Músculo</a></h2>
-                <p>Recetas, consejos y trucos para ganar músculo de manera saludable.</p>
-            </article>
+  </header>
+  
+    <h1>Blog de Fitness</h1>
 
-            <article class="article reveal" data-category="entrenamiento">
-                <img src="images/entrenamiento.jpg" alt="Entrenamiento">
-                <h2><a href="#">Rutina de Entrenamiento para Principiantes</a></h2>
-                <p>Todo lo necesario para empezar a entrenar de manera segura y efectiva.</p>
-            </article>
+    <!-- Filtros -->
+    <input type="radio" name="filter" id="all" checked>
+    <input type="radio" name="filter" id="nutrition">
+    <input type="radio" name="filter" id="training">
 
-            <article class="article reveal" data-category="salud">
-                <img src="images/salud.jpg" alt="Salud">
-                <h2><a href="#">Cómo Mejorar tu Salud Mental</a></h2>
-                <p>Consejos y recursos para cuidar tu bienestar emocional.</p>
-            </article>
+    <div class="filters">
+        <label for="all">Todos</label>
+        <label for="nutrition">Nutrición</label>
+        <label for="training">Entrenamiento</label>
+    </div>
 
-            <article class="article reveal" data-category="estilo-de-vida">
-                <img src="images/estilo-de-vida.jpg" alt="Estilo de Vida">
-                <h2><a href="#">Estilo de Vida Saludable: Consejos Prácticos</a></h2>
-                <p>Pequeños cambios que pueden hacer una gran diferencia en tu bienestar.</p>
-            </article>
-        </main>
+    <!-- Posts -->
+    <section class="posts">
+        <article class="post featured nutrition" >
+            <h2>Dieta balanceada: lo que debes saber</h2>
+            <p>Consejos prácticos sobre cómo mantener una dieta saludable sin dejar de disfrutar.</p>
+        </article>
+
+        <article class="post training">
+            <h2>Rutina HIIT para quemar grasa</h2>
+            <p>Entrenamiento intenso de solo 20 minutos. ¡Ideal si no tenés mucho tiempo!</p>
+        </article>
+
+        <article class="post nutrition">
+            <h2>Suplementos: ¿cuáles realmente funcionan?</h2>
+            <p>Analizamos los más comunes y cuáles tienen respaldo científico.</p>
+        </article>
+
+        <article class="post training">
+            <h2>Errores comunes al entrenar en el gimnasio</h2>
+            <p>Evitalos para aprovechar al máximo cada sesión.</p>
+        </article>
     </section>
-    <!-- Pie de página -->
-  <footer>
-    <div class="newsletter">
-        <h3>SUSCRÍBETE A NUESTRO BOLETÍN</h3>
-        <form>
-            <input type="email" placeholder="Correo electrónico">
-            <button type="submit">SUSCRIBIRSE</button>
-        </form>
-    </div>
+    
 
-    <div class="social-media">
-        <h3>Conecta con nosotros</h3>
-        <ul>
-            <li><a href="#">Facebook</a></li>
-            <li><a href="#">Instagram</a></li>
-            <li><a href="#">Twitter</a></li>
-        </ul>
-    </div>
+    <!-- Comentarios -->
+    <section class="comments">
+      <h3>Comentarios</h3>
+  
+      <div class="comment">
+          <div class="avatar"></div>
+          <div class="text">
+              <h4>Luis</h4>
+              <p>Muy buenos tips, gracias por compartir.</p>
+          </div>
+      </div>
+  
+      <div class="comment">
+          <div class="avatar"></div>
+          <div class="text">
+              <h4>Martina</h4>
+              <p>Me encantó el artículo sobre suplementos.</p>
+          </div>
+      </div>
+  
+      <div class="comment">
+          <div class="avatar"></div>
+          <div class="text">
+              <h4>Andrés</h4>
+              <p>Muy completo el análisis, seguiré tus consejos.</p>
+          </div>
+      </div>
+  
+      <div class="comment">
+          <div class="avatar"></div>
+          <div class="text">
+              <h4>Sofía</h4>
+              <p>Estoy empezando en el gimnasio y esto me ayudó mucho.</p>
+          </div>
+      </div>
+  
+      <div class="comment">
+          <div class="avatar"></div>
+          <div class="text">
+              <h4>Mario</h4>
+              <p>Información muy clara y práctica, gracias.</p>
+          </div>
+      </div>
+  </section>
+    <!-- ============ FOOTER ============ -->
+    <footer>
+        <!-- Formulario para suscribirse al newsletter -->
+        <div class="newsletter">
+            <h3>Suscribite a nuestro newsletter</h3>
+            <form>
+                <input type="email" placeholder="Tu email">
+                <button type="submit">Suscribirme</button>
+            </form>
+        </div>
 
-    <div class="location">
-        <h3>NUESTRA UBICACIÓN</h3>
-        <iframe src="https://www.google.com/maps/embed?..." width="200" height="150" allowfullscreen="" loading="lazy"></iframe>
-    </div>
+        <!-- Enlaces a redes sociales -->
+        <div class="redes">
+            <a href="#">Instagram</a>
+            <a href="#">Facebook</a>
+            <a href="#">TikTok</a>
+        </div>
 
-    <div class="copyright">
-        <p>© 2025 Olimpo Gym. Todos los derechos reservados.</p>
-    </div>
-</footer>
+        <!-- Mapa interactivo embebido -->
+        <div class="mapa">
+            <iframe width="100%" height="350" frameborder="0" scrolling="no" marginheight="0" marginwidth="0"
+                src="https://www.openstreetmap.org/export/embed.html?bbox=-58.4209,-34.6037,-58.4200,-34.6027&layer=mapnik">
+            </iframe>
+        </div>
+    </footer>
+    <!-- Scroll Reveal con JavaScript -->
+    <script>
+        const posts = document.querySelectorAll('.post');
+
+        const observer = new IntersectionObserver(entries => {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    entry.target.classList.add('show');
+                    observer.unobserve(entry.target);
+                }
+            });
+        }, { threshold: 0.1 });
+
+        posts.forEach(post => observer.observe(post));
+    </script>
+    <script src="js/mod.js"></script>
 </body>
 
 </html>
