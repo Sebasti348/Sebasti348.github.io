@@ -1,62 +1,89 @@
 footer {
-    background-color: #1a1a1a;
-    color: white;
-    padding: 20px;
+    background-color: var(--color-fondo);
+    color: var(--color-texto, #333);
+    padding: 40px 20px;
+    font-size: 0.9rem;
+  }
+  
+  .footer-container {
     display: flex;
-    justify-content: space-between;
     flex-wrap: wrap;
-}
-
-footer div {
+    justify-content: space-between;
+    align-items: flex-start;
+    gap: 20px;
+    max-width: 1200px;
+    margin: 0 auto;
+  }
+  
+  .footer-section {
     flex: 1;
-    margin: 0 10px;
-}
-
-footer h3 {
-    margin-bottom: 10px;
-}
-
-footer form {
-    display: flex;
-    flex-direction: column;
-}
-
-footer input[type="email"] {
-    padding: 10px;
-    border-radius: 5px;
-    border: none;
-    width: 200px;
-}
-
-footer button[type="submit"] {
-    padding: 10px 20px;
-    background-color: #ff6b6b;
-    color: white;
-    border: none;
-    border-radius: 5px;
-    margin-top: 10px;
-}
-
-footer ul {
+    min-width: 250px;
+  }
+  
+  .footer-section h3 {
+    font-size: 1.2rem;
+    margin-bottom: 15px;
+    color: var(--color-primario, #4caf50);
+  }
+  
+  .footer-section ul {
     list-style: none;
     padding: 0;
-}
-
-footer ul li {
-    margin-bottom: 5px;
-}
-
-footer ul li a {
-    color: white;
+  }
+  
+  .footer-section ul li {
+    margin-bottom: 10px;
+  }
+  
+  .footer-section ul li a {
+    color: var(--color-texto, #333);
     text-decoration: none;
-}
-
-footer iframe {
-    border: 0;
-}
-
-footer .copyright {
+    transition: color 0.3s ease;
+  }
+  
+  .footer-section ul li a:hover {
+    color: var(--color-primario, #4caf50);
+  }
+  
+  .newsletter form {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    padding: 100px;
+  }
+  
+  .newsletter input[type="email"] {
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
     width: 100%;
+  }
+  
+  .newsletter button {
+    padding: 10px;
+    background-color: var(--color-primario, #4caf50);
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+  }
+  
+  .newsletter button:hover {
+    background-color: var(--color-secundario, #388e3c);
+  }
+  
+  .location iframe {
+    width: 100%;
+    height: 150px;
+    border: none;
+    border-radius: 5px;
+  }
+  
+  .footer-bottom {
     text-align: center;
     margin-top: 20px;
-}
+    padding-top: 10px;
+    border-top: 1px solid #ccc;
+    color: var(--color-texto, #666);
+  }

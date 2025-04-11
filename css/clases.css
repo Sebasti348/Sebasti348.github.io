@@ -118,16 +118,43 @@ header {
     display: inline-block;
   }
   
+  .gallery {
+    display: flex; /* Activa Flexbox */
+    flex-wrap: wrap; /* Permite que las imágenes se ajusten a la siguiente fila si no caben */
+    gap: 10px; /* Espaciado entre las imágenes */
+    justify-content: center; /* Centra las imágenes horizontalmente */
+  }
+  
+  .gallery {
+    display: flex; /* Activa Flexbox */
+    flex-wrap: wrap; /* Permite que las imágenes se ajusten a la siguiente fila si no caben */
+    gap: 10px; /* Espaciado entre las imágenes */
+    justify-content: center; /* Centra las imágenes horizontalmente */
+  }
+  
   .gallery .item {
-    display: none; /* Oculta todas las imágenes por defecto */
+    transition: transform 0.3s ease, filter 0.3s ease; /* Transición suave para escala y opacidad */
   }
   
   .gallery .item img {
-    width: 300px; /* Define un ancho fijo */
-    height: 200px; /* Define una altura fija */
-    object-fit: cover; /* Recorta la imagen para que se ajuste al tamaño */
-    border-radius: 10px;
+    width: 300px; /* Ancho fijo */
+    height: 200px; /* Altura fija */
+    object-fit: cover; /* Ajusta la imagen sin deformarla */
+    border-radius: 10px; /* Bordes redondeados */
+    filter: brightness(0.5); /* Oscurece las imágenes por defecto */
+    transform: scale(0.9); /* Reduce ligeramente el tamaño por defecto */
+    transition: filter 0.3s ease, transform 0.3s ease; /* Transición suave para brillo y escala */
   }
+  
+  /* Reglas para mostrar los elementos según la categoría seleccionada */
+/* Reglas para resaltar las imágenes seleccionadas */
+#musculacion:checked ~ .gallery .item.musculacion img,
+#crossfit:checked ~ .gallery .item.crossfit img,
+#yoga:checked ~ .gallery .item.yoga img,
+#spinning:checked ~ .gallery .item.spinning img {
+  filter: brightness(1); /* Desoscurece las imágenes seleccionadas */
+  transform: scale(1); /* Devuelve las imágenes seleccionadas a su tamaño original */
+}
   
   /* Reglas para mostrar los elementos según la categoría seleccionada */
   #musculacion:checked ~ .gallery .musculacion {
@@ -167,18 +194,64 @@ header {
     box-shadow: 0 4px 20px rgba(0, 0, 0, 0.3);
   }
   
-  /* Tabla de horarios */
-  .schedule table {
-    width: 100%;
-    border-collapse: collapse;
-    margin: 20px 0;
+/* Tabla de horarios */
+.styled-table {
+  width: 100%;
+  border-collapse: collapse;
+  margin: 25px 0;
+  font-size: 18px;
+  text-align: left;
+  background-color: var(--color-fondo); /* Fondo con variable */
+  color: var(--color-texto); /* Texto con variable */
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+.styled-table thead tr {
+  background-color: #009879;
+  text-align: center;
+}
+
+.styled-table th,
+.styled-table td {
+  padding: 12px 15px;
+  border: 1px solid #dddddd;
+}
+
+/* Responsividad para pantallas pequeñas */
+@media (max-width: 768px) {
+  .styled-table {
+    font-size: 0.9rem; /* Reduce el tamaño de la fuente */
   }
-  
-  .schedule th, .schedule td {
-    border: 1px solid #ccc;
+
+  .styled-table thead {
+    display: none; /* Oculta el encabezado de la tabla */
+  }
+
+  .styled-table tbody tr {
+    display: block; /* Hace que cada fila sea un bloque */
+    margin-bottom: 15px; /* Espaciado entre filas */
+  }
+
+  .styled-table tbody td {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
     padding: 10px;
-    text-align: center;
+    border: 1px solid #dddddd;
   }
+
+  .styled-table tbody td::before {
+    content: attr(data-label); /* Usa el atributo data-label para mostrar el encabezado */
+    font-weight: bold;
+    text-transform: uppercase;
+    color: #009879;
+    margin-right: 10px;
+  }
+}
+  
+
+  
+
   
   @media (max-width: 768px) {
     .schedule table {
@@ -190,15 +263,4 @@ header {
     }
   }
   
-  /* Galería tipo Masonry */
-  .masonry-gallery {
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
-    gap: 10px;
-  }
-  
-  .masonry-gallery div img {
-    width: 100%;
-    height: auto;
-    border-radius: 5px;
-  }
+ 

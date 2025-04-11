@@ -66,23 +66,26 @@ body.modo-oscuro .menu-logo {
   }
   
   /* Submenú desplegable */
-  ul.mega-menu > li > ul {
-    display: none; /* Oculto por defecto */
-    position: absolute;
-    top: 100%; /* Coloca el submenú debajo del enlace padre */
-    left: 50%;
-    transform: translateX(-50%); /* Centra el submenú debajo del padre */
-    background-color: var(--color-fondo); /* Fondo blanco */
-    border-radius: 5px;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Sombra para el submenú */
-    list-style: none;
-    padding: 10px;
-    z-index: 1000; /* Asegura que el submenú quede sobre otros elementos */
-  }
-  
-  ul.mega-menu > li:hover > ul {
-    display: block; /* Muestra el submenú al pasar el mouse */
-  }
+/* Submenú desplegable */
+/* Submenú desplegable */
+ul.mega-menu > li > ul {
+  display: none; /* Oculto por defecto */
+  position: absolute;
+  top: 100%; /* Coloca el submenú debajo del enlace padre */
+  left: 0;
+  background-color: var(--color-fondo); /* Fondo blanco */
+  border-radius: 5px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  list-style: none;
+  padding: 10px;
+  z-index: 1000;
+}
+
+
+/* Mostrar el submenú solo al pasar el mouse sobre "Opciones" */
+ul.mega-menu > li:hover > ul {
+  display: block;
+}
   
   ul.mega-menu > li > ul > li {
     margin: 0;
@@ -99,6 +102,25 @@ body.modo-oscuro .menu-logo {
   ul.mega-menu > li > ul > li > a:hover {
     background-color: #f0f0f0; /* Fondo ligero en hover */
   }
+  /* Alinear Blog y Contacto uno al lado del otro */
+.nav-links {
+  display: flex; /* Activa Flexbox */
+  gap: 1rem; /* Espaciado entre los enlaces */
+}
+
+/* Estilo para los enlaces */
+.nav-links a {
+  text-decoration: none;
+  color: var(--color-texto, #333);
+  font-weight: bold;
+  padding: 10px 15px;
+  transition: color 0.3s ease, background-color 0.3s ease;
+}
+
+.nav-links a:hover {
+  color: var(--color-primario, #4caf50);
+  background-color: #f0f0f0;
+}
   
   /* Botón de modo oscuro alineado a la derecha */
   #toggle-modo {
